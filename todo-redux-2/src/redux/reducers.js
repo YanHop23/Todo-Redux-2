@@ -9,9 +9,10 @@ const todos = (state = initalState, action) => {
         case ADD_TODO:
             let newTodo = {
                 id: action.id,
-                text: action.text,
+                text: state.newTodoText,
             };
             state.todos.push(newTodo);
+            console.log(state.todos);
             return state;
         case UDATE_TEXT:
             state.newTodoText = action.newText;

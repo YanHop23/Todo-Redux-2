@@ -1,10 +1,10 @@
 import "./App.css";
-import { AddTodo } from "./components/AddTodo";
+import AddTodo from "./components/AddTodo";
 
 function App() {
     return (
         <div className="App">
-            <AddTodo />
+          <AddTodo />
         </div>
     );
 }
