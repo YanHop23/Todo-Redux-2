@@ -2,8 +2,13 @@ const initalState = []
 const todos = (state = initalState, action) => {
     switch (action.type) {
         case 'ADD_TODO':
-            console.log('add_todo');
-            return state;
+            return [
+                ...state, 
+                {
+                    id: action.id, 
+                    text: action.text,
+                }
+            ];
         default:
             return state;
     }
