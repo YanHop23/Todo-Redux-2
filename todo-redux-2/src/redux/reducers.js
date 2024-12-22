@@ -4,22 +4,20 @@ const initalState = {
     todos: [],
     newTodoText: "Enter todo here",
 };
-const todos = (state = initalState, action) => {
+export const todos = (state = initalState, action) => {
     switch (action.type) {
         case ADD_TODO:
             let newTodo = {
                 id: action.id,
-                text: state.newTodoText,
+                text: action.text,
             };
             state.todos.push(newTodo);
-            console.log(state.todos);
+            console.log(action);
             return state;
-        case UDATE_TEXT:
-            state.newTodoText = action.newText;
+            case UDATE_TEXT:
+                state.newTodoText = action.newText;
             return state;
         default:
             return state;
     }
 };
-
-export default todos;

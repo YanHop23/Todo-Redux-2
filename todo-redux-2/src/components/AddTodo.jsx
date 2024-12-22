@@ -1,15 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import { addTodo, updateText } from "../redux/actions";
+import React, { useState } from "react";
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = (props) => {
+    const [text, setText] = useState("");
     const onTextChange = (e) => {
-        console.log(e.target.value);
-        dispatch(updateText(e.target.value));
+        setText(e.target.value);
+        props.changeText(text);
     };
     const submitTodo = (e) => {
         e.preventDefault();
-        dispatch(addTodo)
+        props.submit(text);
     };
     return (
         <form onSubmit={submitTodo}>
@@ -22,4 +21,4 @@ const AddTodo = ({ dispatch }) => {
         </form>
     );
 };
-export default connect()(AddTodo);
+export default AddTodo;

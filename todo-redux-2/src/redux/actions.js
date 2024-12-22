@@ -4,7 +4,7 @@ export const UDATE_TEXT = 'UDATE_TEXT';
 
 
 export const addTodo = (text) => ({
-    id: todoId + 1, 
+    id: todoId++, 
     type: ADD_TODO,
     text,
 });
