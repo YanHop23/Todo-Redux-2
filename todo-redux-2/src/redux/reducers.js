@@ -11,12 +11,15 @@ export const todos = (state = initalState, action) => {
                 id: action.id,
                 text: action.text,
             };
-            state.todos.push(newTodo);
-            console.log(action);
-            return state;
-            case UDATE_TEXT:
-                state.newTodoText = action.newText;
-            return state;
+            return {
+                ...state,
+                todos: [...state.todos, newTodo],
+            };
+        case UDATE_TEXT:
+            return {
+                ...state,
+                newTodoText: action.newText,
+            };
         default:
             return state;
     }

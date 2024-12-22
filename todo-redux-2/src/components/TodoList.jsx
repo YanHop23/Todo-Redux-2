@@ -1,9 +1,11 @@
 import React from "react";
-export const TodoList = ({ todos }) => {
+export const TodoList = (props) => {
+    let todos = props.todos;
+
     return (
         <ul>
-            {todos.map((index, text) => (
-                <li key={index}>{text}</li>
+            {todos.map((todo) => (
+                <li key={todo.id}>{todo.text}</li>
             ))}
         </ul>
     );

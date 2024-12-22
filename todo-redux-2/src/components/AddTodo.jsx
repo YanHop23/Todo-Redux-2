@@ -8,7 +8,11 @@ const AddTodo = (props) => {
     };
     const submitTodo = (e) => {
         e.preventDefault();
-        props.submit(text);
+        if(text !== ''){
+            props.submit(text);
+        } else {
+            alert('Fill input!!!')
+        }
     };
     return (
         <form onSubmit={submitTodo}>

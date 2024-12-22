@@ -1,15 +1,12 @@
-import { useSelector } from "react-redux";
 import "./App.css";
-import { TodoList } from "./components/TodoList";
 import AddTodoContainer from "./containers/AddTodoContainer";
+import TodoListContainer from "./containers/TodoListContainer";
 
 function App() {
-    const todos = useSelector((state) => state.todos);
-
     return (
         <div className="App">
             <AddTodoContainer />
-            {/* <TodoList todos={todos} /> */}
+            <TodoListContainer />
         </div>
     );
 }
