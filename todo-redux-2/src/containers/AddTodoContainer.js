@@ -1,4 +1,4 @@
-import { addTodo, updateText } from "../redux/actions";
+import { addTodo, updateText } from "../redux/actions/ControlActions";
 import { connect } from "react-redux";
 import AddTodo from "../components/AddTodo";
 
@@ -13,5 +13,5 @@ let mapDispatchToProps = (dispatch) => {
     };
 };
 
-const AddTodoContainer = connect(null ,mapDispatchToProps)(AddTodo);
+const AddTodoContainer = connect(null, mapDispatchToProps)(AddTodo);
 export default AddTodoContainer;
