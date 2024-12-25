@@ -4,8 +4,9 @@ export const TodoList = (props) => {
 
     return (
         <ul>
+            <p className="text-3xl">hello</p>
             {todos.map((todo) => (
-                <li key={todo.id}>{todo.text}</li>
+                <li  key={todo.id}>{todo.text}</li>
             ))}
         </ul>
     );

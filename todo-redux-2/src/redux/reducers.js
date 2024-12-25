@@ -16,6 +16,8 @@ export const todos = (state = initalState, action) => {
                 todos: [...state.todos, newTodo],
             };
         case UDATE_TEXT:
+            console.log(action.newText);
+            
             return {
                 ...state,
                 newTodoText: action.newText,
